@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Home Page
+        </title>
+        <link rel="Shortcut Icon" type="image/x-icon" href="https://img.icons8.com/color/48/000000/motherboard.png"/>
+        <script>function startTime(){
+                var today=new Date();
+                var hh=today.getHours();
+                var mm=today.getMinutes();
+                var ss=today.getSeconds();
+                mm=checkTime(mm);
+                ss=checkTime(ss);
+                document.getElementById('clock').innerHTML=hh+":"+mm+":"+ss;
+                var timeoutId=setTimeout(startTime, 500);
+            }
+            function checkTime(i){
+                if(i<10){
+                    i="0"+1;
+                }
+                return i;
+            }
+            </script>
+    </head>
+    <body bgcolor="brown" onload="startTime()">
+        <hr color="yellow" size="10">
+        <h1>
+            <font color="white"><code><marquee behavior="alternate" scrollamount="10">Welcome</marquee></code></font>
+        </h1>
+        <hr color="yellow" size="10">
+        <h1>
+            <ul>
+                <li><a href="python.html"><i><font color="aqua">Python</font></i></a></li>
+                <br><li><a href="git.html"><i><font color="aqua">Git</font></i></a></li>
+                <br><li><a href="ubuntu.html"><i><font color="aqua">Ubuntu</font></i></a></li>
+            </ul>
+        </h1>
+        <hr color="yellow" size="10">
+        <center><div id="clock"></div></center>
+        <style>#clock{
+                color:white;
+                font: 2em sans-serif; 
+                background:black; 
+                margin: 5px;
+                padding: 5px;
+                border: solid gray 2px; 
+                border-radius: 10px;
+                width:140px;
+                text-align:center;
+              }
+              </style>
+    </body>
+</html>
